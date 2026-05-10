@@ -1,4 +1,4 @@
-# student_01 Ianitchi Valeria
+# student_02 Catalina Minciuna
 
 This is my individual notebook workspace for the AI Engineering course.
 
