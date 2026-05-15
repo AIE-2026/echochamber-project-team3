@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-05-15T14:05:16.404132",
+  "model": "gemini-2.5-flash",
+  "temperature": 0.2,
+  "max_tokens": 120,
+  "task": "student_neutral_summary",
+  "input_text": "\nTransportul public ajută la reducerea numărului de mașini personale din orașe.\nAutobuzele, tramvaiele, metroul și trenurile urbane pot transporta mulți oameni simultan.\nFolosirea lor poate reduce aglomerația și poluarea aerului.\nPentru ca transportul public să fie eficient, este important să fie punctual, accesibil și sigur.\nOrașele investesc în benzi dedicate, stații moderne și aplicații pentru informarea pasagerilor.\nUn sistem bine organizat poate îmbunătăți mobilitatea și calitatea vieții locuitorilor.\n",
+  "output_text": "Transportul public ("
+}
