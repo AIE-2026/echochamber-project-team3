@@ -13,3 +13,12 @@ This is my individual notebook workspace for the AI Engineering course.
 | **Temperature** | `0.2` |
 
 **Justificare:** Gemini 2.5 Flash a produs cele mai precise răspunsuri în română, respectând consistent formatul din system prompt și generând JSON valid în toate testele. Față de Flash Lite, răspunsurile sunt mai detaliate și mai nuanțate, important pentru adnotarea corectă a comentariilor politice. OpenRouter Free rămâne opțiune de rezervă, dar prezintă inconsistențe gramaticale și nu respectă întotdeauna formatul cerut.
+
+## Corpus C3 — Surse colectate
+
+| Canal | Handle | Zonă discursivă |
+|---|---|---|
+| Recorder | `RecorderRomania` | Civic / investigativ |
+| Europa Liberă România | `europa-libera-romania` | Civic / investigativ |
+
+**Bulă:** S6 · Intelectual-critic — analitic · sceptic · detașat
