@@ -48,7 +48,7 @@ from tqdm import tqdm
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 
-DEFAULT_PROMPT = "prompts/annotation_prompt.md"
+DEFAULT_PROMPT = "prompts/team_annotation_prompt.md"
 
 DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 DEEPSEEK_MODEL = "deepseek-chat"
