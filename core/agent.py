@@ -132,10 +132,12 @@ def make_llm(provider: str = "gemini", temperature: float = 0.3) -> ChatOpenAI:
 
 # ── funcția principală ───────────────────────────────────────────────────────
 def generate_agent_response(
-    agent_slug: str,
-    stimulus:   str,
-    provider:   str = "gemini",
-    k:          int = 5,
+    agent_slug:  str,
+    stimulus:    str,
+    provider:    str = "gemini",
+    k:           int = 5,
+    temperature: float = 0.3,
+    roles_path:  str = None,
 ) -> dict:
     """
     Generează un răspuns RAG pentru agentul indicat.
