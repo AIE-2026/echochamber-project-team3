@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-05-19T10:25:58.185798",
+  "model": "gemini-2.5-flash",
+  "temperature": 0.2,
+  "max_tokens": 500,
+  "task": "student_neutral_summary",
+  "input_text": "\nBărbatul din Arad infectat cu hantavirus nu are tulpina cu transmitere de la om la om, a anunţat Institutul Cantacuzino. Opt pacienţi de la Spitalul de Psihiatrie Ştei au fost izolaţi, fiind contacţi ai bărbatului diagnosticat. Între timp, controlul dispus de Ministerul Sănătăţii a depistat mai multe deficienţe.\n",
+  "output_text": "Institutul Cantacuzino a anunțat că bărbatul din Arad infectat cu hantavirus nu are tulpina transmisibilă de la om la om. Opt pacienți de la Spitalul de Psihiatrie Ștei, contacți ai acestuia, au fost izolați. Între timp, un control dispus de Ministerul Sănătății a depistat mai multe deficiențe."
+}
