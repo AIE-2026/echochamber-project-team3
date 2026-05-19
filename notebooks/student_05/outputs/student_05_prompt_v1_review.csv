@@ -1,0 +1,100 @@
+﻿source_channel,video_title,comment_text,model_output
+RecorderRomania,PORTRET DE CANDIDAT: Nicușor Dan,"Mi-aduc aminte reportajul cu ND prima zi la primarie. Asteptam si unul la 100 de zile, 365, patru ani, sau ceva. Probabil n-ati mai dat de el. Ca realizari e greu sa gasesti.","```json
+{
+    ""target"": ""Nicolae Duduianu (ND)"",
+    ""stance"": ""CONTRA"",
+    ""sentiment"": ""negativ"",
+    ""tone"": ""sarcastic"",
+    ""topic"": ""performanța administrativă"",
+    ""interpretation_problem"": ""niciuna"",
+    ""justification"": ""Autorul face o comparație sarcastică între așteptările inițiale legate de activitatea unui politician (ND) și lipsa de realizări concrete, sugerând o performanță slabă.""
+}
+```"
+turcescu111,"TIC-TAC, TIC-TAC, pregătiți-vă: Călin Georgescu va face anunțul!",Nu sunt nici socialiști intrucat tot greul merge pe cei ce muncesc si pe pensionari prin preturile majorite la coșul zilnic Partidele din Parlamentul României si cel European lucrează la comanda UE si pentru interesele proprii,"```json
+{
+    ""target"": ""Partidele din Parlamentul României si cel European"",
+    ""stance"": ""CONTRA"",
+    ""sentiment"": ""negativ"",
+    ""tone"": ""indignat"",
+    ""topic"": ""economie"",
+    ""interpretation_problem"": ""niciuna"",
+    ""justification"": ""Autorul critică partidele politice din România și Europa, acuzându-le că impun prețuri mari la bunurile de consum zilnic, ceea ce afectează muncitorii și pensionarii. De asemenea, susține că acestea lucrează la comanda UE și pentru interese proprii, sugerând o lipsă de preocupare pentru cetățeni.""
+}
+```"
+turcescu111,Iran contra-atacă. Orientul Mijlociu în flăcări,"Ce democraatie? Unde mai exista democrație? Democrația lui Netanyahu, a Uniunii Europene, a Americii..Să fim serioși! Există doar interese și resurse!","```json
+{
+    ""target"": ""democrație"",
+    ""stance"": ""CONTRA"",
+    ""sentiment"": ""negativ"",
+    ""tone"": ""sarcastic"",
+    ""topic"": ""politică"",
+    ""interpretation_problem"": ""niciuna"",
+    ""justification"": ""Autorul pune sub semnul întrebării existența democrației, menționând actori politici specifici și sugerând că doar interesele și resursele contează, ceea ce indică o poziție contra și un sentiment negativ, exprimat printr-un ton sarcastic.""
+}
+```"
+digi24hd56,"Hectare întregi din pădurea Hoia-Baciu de lângă Cluj-Napoca, tăiate „la ras”, peste ce prevede legea","fenomene paranormale imobiliare. si apoi fenomene paranormale prin care se aproba acte, se uita dosare penale, se impart milioane de euro. si fenomene paranormale prin care lemnul este acceptat la firmele de profil.","```json
+{
+    ""target"": ""clasa politică"",
+    ""stance"": ""CONTRA"",
+    ""sentiment"": ""negativ"",
+    ""tone"": ""indignat"",
+    ""topic"": ""corupție"",
+    ""interpretation_problem"": ""niciuna"",
+    ""justification"": ""Comentariul acuză clasa politică de corupție și nereguli grave, folosind expresia 'fenomene paranormale' pentru a sublinia caracterul nefiresc și ilegal al acțiunilor.""
+}
+```"
+RecorderRomania,PORTRET DE CANDIDAT: George Simion,Simion e un personaj machiavelic. Ce obtii semanand ura? Tara nu se conduce precum o galerie de fotbal.,"```json
+{
+    ""target"": ""George Simion"",
+    ""stance"": ""CONTRA"",
+    ""sentiment"": ""negativ"",
+    ""tone"": ""agresiv"",
+    ""topic"": ""politică"",
+    ""interpretation_problem"": ""niciuna"",
+    ""justification"": ""Comentariul îl critică direct pe George Simion, numindu-l 'machiavelic' și acuzându-l că seamănă ură, sugerând o abordare nepotrivită a politicii.""
+}
+```"
+turcescu111,"TIC-TAC, TIC-TAC, pregătiți-vă: Călin Georgescu va face anunțul!","Domnule Robert , Trump i-a dat un termen in care să oprească lucrul de a ter.ina bomba nucleară și Iranul nu a luat in seamă, de-aceea au atacat americanii .","```json
+{
+    ""target"": ""Trump"",
+    ""stance"": ""PRO"",
+    ""sentiment"": ""neutru"",
+    ""tone"": ""informativ"",
+    ""topic"": ""geopolitică"",
+    ""interpretation_problem"": ""niciuna"",
+    ""justification"": ""Comentariul explică o acțiune a lui Trump legată de Iran, prezentând-o ca pe o consecință logică a refuzului Iranului de a respecta un ultimatum.""
+}
+```"
+CălinGeorgescu-CanalulOficial,Călin Georgescu - Și a plâns Iisus ( 21.10.2025 - Tribunal),Cel Mai IUBIT OM DIN ROMANIA ❤❤❤❤SI IN EUROPA IL CUNOSC STRAINII ANUL TRECUT AM FOST IN 4 TARI EUROPENE NIMENI IN 20 DE ANI DE CALATORIE NU MI-A VORBIT DE ROMANIA STIAU DECÂT HAGI SI CEAUSESCU DAR ACUM TOTI IMI SPUN CÃLIN GEORGESCU IS THE REAL PRESIDENT OF ROMANIA 🇷🇴🇷🇴 NOT THE ILLEGAL MUC,"```json
+{
+    ""target"": ""Călin Georgescu"",
+    ""stance"": ""PRO"",
+    ""sentiment"": ""pozitiv"",
+    ""tone"": ""admirativ"",
+    ""topic"": ""politică internă"",
+    ""interpretation_problem"": ""niciuna"",
+    ""justification"": ""Autorul exprimă admirație față de Călin Georgescu, considerându-l 'cel mai iubit om din România și Europa', și susține că este 'the real president of Romania', contrastându-l cu o figură negativă ('ILLEGAL MUC'). Comentariul laudă recunoașterea internațională a lui Georgescu.""
+}
+```"
+@CălinGeorgescu-CanalulOficial,Călin Georgescu - Nu suntem singuri! ( 13.01.2026 - la Poliția Buftea ),"mai du-te si invarte-te odata, nene, ca ti-ai facut numarul, si mai lasa oamenii in pace nu i mai tot aburi cu povesti ca i-ai aburit destul","```json
+{
+    ""target"": ""nespecificat"",
+    ""stance"": ""CONTRA"",
+    ""sentiment"": ""negativ"",
+    ""tone"": ""agresiv"",
+    ""topic"": ""nespecificat"",
+    ""interpretation_problem"": ""niciuna"",
+    ""justification"": ""Autorul exprimă o atitudine negativă și agresivă față de o persoană nespecificată, sugerând că aceasta a mințit și a deranjat suficient, cerându-i să înceteze.""
+}
+```"
+CălinGeorgescu-CanalulOficial,"Călin Georgescu - SUVERANITATEA - la Buftea, ora 11 ( 11.11.2025 )",❤️ Prezența dumneavoastră ne dă speranță și putere. Ne faceți ziua mai frumoasă de fiecare dată!🙏❤️🇷🇴,"```json
+{
+    ""target"": ""nespecificat"",
+    ""stance"": ""PRO"",
+    ""sentiment"": ""pozitiv"",
+    ""tone"": ""admirativ"",
+    ""topic"": ""nespecificat"",
+    ""interpretation_problem"": ""niciuna"",
+    ""justification"": ""Comentariul exprimă admirație și apreciere față de o persoană sau entitate nenumită, folosind un limbaj pozitiv și emoțional.""
+}
+```"
