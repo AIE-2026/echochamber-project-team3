@@ -166,3 +166,28 @@ def generate_agent_response(
         "response":   response.content,
         "rag_text":   rag_text,
     }
+
+
+# ── terminal test ────────────────────────────────────────────────────────────
+# Run: python -m core.agent --agent <slug> --text "<stimulus>" --provider gemini --k 5
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Test RAG agent from terminal.")
+    parser.add_argument("--agent",    required=True, help="Agent slug (ex: intelectual_critic)")
+    parser.add_argument("--text",     required=True, help="Stimulus text")
+    parser.add_argument("--provider", default="gemini", help="LLM provider: gemini / deepseek")
+    parser.add_argument("--k",        type=int, default=5, help="Number of retrieved fragments")
+    args = parser.parse_args()
+
+    result = generate_agent_response(
+        agent_slug=args.agent,
+        stimulus=args.text,
+        provider=args.provider,
+        k=args.k,
+    )
+
+    print(f"\nAgent:    {result['agent_name']}")
+    print(f"Stimulus: {result['stimulus']}")
+    print(f"\n--- Context RAG ---\n{result['rag_text']}")
+    print(f"\n--- Răspuns agent ---\n{result['response']}")
