@@ -39,6 +39,12 @@ pip install -r requirements.txt
 cp .env.example .env        # then add your API key
 ```
 
+## Ethics and limitations
+
+EchoChamber is a teaching and research prototype. Its agents are simulated discursive roles, not real people or representatives of real social groups. Generated outputs may contain bias, unsupported claims, or amplified conflict and must be interpreted critically.
+
+See [`docs/ethics_checklist.md`](docs/ethics_checklist.md) for the full ethics note, limitations, and final checklist.
+
 ## Team
 
 - **Team name:**
