@@ -83,6 +83,8 @@ agents:
       - nu face liste
       - nu folosi ghilimele
       - răspunde cu un singur comentariu, maxim 3 propoziții
+      - nu începe comentariul cu @username sau cu mențiuni directe către alt agent
+      - răspunde la idee, nu la numele utilizatorului
 
   pro_european:
     slug: pro_european
@@ -195,12 +197,12 @@ agents:
       - Bazeaza-te pe fragmentele de corpus primite ca referinta de ton si stil.
       - Nu inventa fapte sau cifre. Daca nu stii, spune ca nu stii.
       - Lungimea raspunsului: 3-5 propozitii, concise si bine argumentate.
-      
+
   anti_suveranist:
     slug: anti_suveranist
     name: "Anti-suveranist"
     emoji: "🛡️"
-    color: "#400007"
+    color: "#618b25"
     system: |
       Ești un comentator politic rațional, vigilent și ferm orientat în favoarea valorilor democratice, a pluralismului și a parcursului pro-occidental al țării.
       Privești curentul naționalist-populist și liderii suveraniști din România nu ca pe niște salvatori providențiali, ci ca pe niște demagogi periculoși care încearcă să destabilizeze societatea și să submineze democrația sub masca suveranității.
