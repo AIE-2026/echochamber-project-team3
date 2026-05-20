@@ -18,6 +18,7 @@ import os
 import sys
 import json
 import yaml
+import html
 from pathlib import Path
 
 import gradio as gr
@@ -27,6 +28,7 @@ from openai import RateLimitError, APIError, AuthenticationError
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
+os.chdir(PROJECT_ROOT)  # asigură că căile relative din core/ funcționează corect
 
 from core.config import (
     PROVIDER_PRINCIPAL,
@@ -37,6 +39,7 @@ from core.config import (
 )
 
 from core.agent import generate_agent_response
+from core.graph import run_thread
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 2. PROVIDERS AND API KEYS
@@ -187,7 +190,65 @@ def rag_agent_response(agent_slug, stimulus, provider, k):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 6. GRADIO UI
+# 6. MULTI-AGENT THREAD LOGIC
+# ─────────────────────────────────────────────────────────────────────────────
+
+def render_thread_html(messages):
+    """Transformă lista de mesaje în carduri HTML pentru afișare."""
+    cards = []
+    for msg in messages:
+        agent  = html.escape(str(msg.get("agent", "")))
+        handle = html.escape(str(msg.get("handle", msg.get("slug", ""))))
+        text   = html.escape(str(msg.get("text", "")))
+        turn   = msg.get("turn", "")
+        cards.append(f"""
+        <div style='border-left:3px solid #e05a35; padding:.7rem 1rem; margin:.3rem 0; background:#16161a'>
+            <div style='font-size:.75rem; color:#e05a35; text-transform:uppercase'>{agent}</div>
+            <div style='font-size:.7rem; color:#888'>{handle} · #{turn}</div>
+            <p style='color:#c0bcb6; margin:.4rem 0 0'>{text}</p>
+        </div>
+        """)
+    return "\n".join(cards)
+
+
+def run_multi_agent_thread(stimulus, provider, total_turns,
+                           use_conspirationist, use_intelectual_critic, use_pro_european,
+                           use_anti_sistem, use_anti_suveranist, use_personalist_salvator):
+    """Rulează un thread multi-agent și returnează HTML."""
+    active_slugs = []
+    if use_conspirationist:
+        active_slugs.append("conspirationist")
+    if use_intelectual_critic:
+        active_slugs.append("intelectual_critic")
+    if use_pro_european:
+        active_slugs.append("pro_european")
+    if use_anti_sistem:
+        active_slugs.append("anti_sistem")
+    if use_anti_suveranist:
+        active_slugs.append("anti_suveranist")
+    if use_personalist_salvator:
+        active_slugs.append("personalist_salvator")
+
+    if not stimulus.strip():
+        return "Scrie un text politic mai întâi."
+    if not active_slugs:
+        return "Selectează cel puțin un agent."
+
+    try:
+        messages = run_thread(
+            stimulus=stimulus,
+            active_slugs=active_slugs,
+            total_turns=int(total_turns),
+            provider=provider,
+            k=3,
+        )
+        return render_thread_html(messages)
+    except Exception as e:
+        return f"[Eroare Multi-agent Thread: {type(e).__name__} — {e}]"
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 7. GRADIO UI
 # ─────────────────────────────────────────────────────────────────────────────
 
 agent_choices = load_agent_choices()
@@ -262,8 +323,42 @@ with gr.Blocks(title="EchoChamber") as demo:
         )
 
 
+    with gr.Tab("Multi-agent thread"):
+        thread_stimulus = gr.Textbox(
+            label="Text politic",
+            value="CCR a decis anularea alegerilor după suspiciuni privind influențe externe.",
+            lines=4
+        )
+        thread_provider = gr.Dropdown(
+            choices=["gemini", "deepseek"],
+            value="gemini",
+            label="Provider"
+        )
+        thread_turns = gr.Slider(
+            minimum=2, maximum=8, value=4, step=1,
+            label="Număr intervenții"
+        )
+        use_conspirationist      = gr.Checkbox(value=True,  label="Conspiraționist")
+        use_intelectual_critic   = gr.Checkbox(value=True,  label="Intelectual-critic")
+        use_pro_european         = gr.Checkbox(value=True,  label="Pro-european")
+        use_anti_sistem          = gr.Checkbox(value=False, label="Anti-sistem")
+        use_anti_suveranist      = gr.Checkbox(value=False, label="Anti-suveranist")
+        use_personalist_salvator = gr.Checkbox(value=False, label="Personalist-salvator")
+
+        thread_button = gr.Button("Pornește thread")
+        thread_output = gr.HTML(label="Thread generat")
+
+        thread_button.click(
+            fn=run_multi_agent_thread,
+            inputs=[thread_stimulus, thread_provider, thread_turns,
+                    use_conspirationist, use_intelectual_critic, use_pro_european,
+                    use_anti_sistem, use_anti_suveranist, use_personalist_salvator],
+            outputs=thread_output
+        )
+
+
 # ─────────────────────────────────────────────────────────────────────────────
-# 7. LAUNCH
+# 8. LAUNCH
 # ─────────────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
