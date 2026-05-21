@@ -6,7 +6,7 @@
 
 ---
 
-## 🎯 Agentul meu: Personalist-salvator
+## Agentul meu: Personalist-salvator
 
 În cadrul proiectului de echipă **EchoChamber** — un simulator de bule discursive politice românești bazat pe comentarii YouTube reale — am construit agentul **Personalist-salvator**.
 
@@ -16,11 +16,10 @@
 
 ---
 
-## 📦 Ce am livrat pentru echipă
+## Ce am livrat pentru echipă
 
 ### C3 — Colectare și curățare corpus
 
-#### [Issue #25 — Download provided YouTube corpus](https://github.com/AIE-2026/echochamber-project-team3/issues/25) ✅
 **Ce am făcut:** Am descărcat și integrat în repo corpusul mare provided de instructor — **30.753 înregistrări** de comentarii YouTube brute.
 
 - Fișier salvat: `data/raw/corpus_youtube_large_raw.jsonl`
@@ -30,7 +29,6 @@
 
 **De ce a contat:** Acest fișier e dataset-ul principal pentru toți pașii următori — adnotare, tipologie, vectorstore. Fără el, restul echipei nu putea avansa.
 
-#### [Issue #26 — Clean the provided YouTube corpus](https://github.com/AIE-2026/echochamber-project-team3/issues/26) ✅
 **Ce am făcut:** Am rulat scriptul `scripts/clean_youtube.py` pe corpusul brut și am livrat versiunea curată pentru întreaga echipă.
 
 **Reguli de curățare aplicate:**
@@ -46,7 +44,6 @@
 - Output: `data/cleaned/corpus_youtube_large_clean.jsonl`
 - Toți colegii au lucrat ulterior pe această versiune curată — adnotare, tipologie, selecție bule
 
-#### [Issue #24 — Add final YouTube collection script](https://github.com/AIE-2026/echochamber-project-team3/issues/24) ✅
 **Ce am făcut:** Am implementat scriptul reutilizabil `scripts/collect_youtube.py` pentru întreaga echipă.
 
 **Funcționalități:**
@@ -70,7 +67,7 @@ python scripts/collect_youtube.py \
 
 ---
 
-## 🛠️ Contribuția mea individuală (Teme 1+2+3)
+## Contribuția mea individuală (Teme 1+2+3)
 
 ### Tema 1 — Primul prompt exploratoriu (C3)
 
@@ -173,7 +170,7 @@ Lista de markeri e acum hardcodată după intuiție. Pentru o versiune mai bună
 
 ---
 
-## 📊 Sumar contribuție individuală
+## Sumar contribuție individuală
 
 | Categorie | Livrat | Locație |
 |---|---|---|
@@ -187,37 +184,4 @@ Lista de markeri e acum hardcodată după intuiție. Pentru o versiune mai bună
 | Tema 2 — agent RAG complet | vectorstore + role card + agent funcțional | `core/` + `assets/` |
 | Tema 3 — extensie Gradio | tab „Markeri" + design tematic | `app/app.py` |
 
----
-
-## 🎤 Cum prezint la demo live (5 min)
-
-**Minutele 1-2** — Deschid aplicația, selectez agentul `personalist_salvator`, dau un stimulus politic ("Călin Georgescu a fost interzis de la candidatură"), aștept răspunsul, îl citesc.
-
-**Minutul 3** — Deschid `assets/roles/role_01.yaml` și explic vocea + worldview-ul + regulile.
-
-**Minutul 4** — Arăt cele 50 de comentarii din `data/bubbles/personalist_salvator.jsonl` + procesul de selecție.
-
-**Minutul 5** — Comentariu critic: ce a funcționat bine (cuvinte din răspuns care apar în corpus = retrieval real), ce a inventat (cuvinte care NU apar nicăieri în contextul recuperat = limitare a `temperature=0.3`), de ce contează etica.
-
----
-
-## 🧠 Ce am învățat personal
-
-1. **Date reale ≠ date utilizabile**: 30.753 comentarii brute au devenit ~50 utilizabile per bulă după curățare, adnotare, filtrare și selecție manuală. Cea mai mare parte din muncă a fost de **prelucrare**, nu de generare.
-
-2. **RAG nu e magie**: dacă corpusul bulei conține bias-uri, agentul le reproduce. Selecția manuală a celor 50 de comentarii a fost critică — un comentariu off-topic în corpus = un răspuns off-topic în output.
-
-3. **LLM-urile sunt prea conservatoare pe scale numerice**: pe 5 axe discursive (institutional, legitimare, epistemic, geopolitic, mobilizare), 95% din comentarii au primit valoarea 0. Asta a făcut clustering-ul cu DBSCAN aproape inutil — un semnal că adnotarea umană (sau few-shot) rămâne necesară pentru calibrare.
-
-4. **Diferența dintre sentiment și stance contează enorm**: cel mai important pas conceptual al proiectului. Un comentariu sarcastic-politicos poate fi pozitiv ca sentiment dar anti ca stance — și asta schimbă complet interpretarea sociologică.
-
-5. **Inspectabilitatea > performanța**: aș fi putut face un sistem mai „inteligent" cu prompt-uri închise, dar n-aș fi putut explica niciodată **de unde vine** un răspuns. LangGraph + FAISS + role.yaml fac fiecare pas vizibil — esențial pentru un proiect de cercetare sociologică.
-
----
-
-## 🔗 Link-uri utile
-
-- Repo principal: [`AIE-2026/echochamber-project-team3`](https://github.com/AIE-2026/echochamber-project-team3)
-- Issues închise de mine: [filtru GitHub](https://github.com/AIE-2026/echochamber-project-team3/issues?q=is%3Aissue+is%3Aclosed+assignee%3Avaleriaianitchi) (sau prin: `is:issue is:closed author:valeriaianitchi`)
-- Notebook-urile mele individuale: `notebooks/student_01/`
-- Agent + corpus + vectorstore: `data/bubbles/personalist_salvator.jsonl`, `assets/vectorstores/personalist_salvator/`, `assets/roles/role_01.yaml`
+--
