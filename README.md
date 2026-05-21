@@ -174,12 +174,12 @@ See also: [`docs/ethics_checklist.md`](docs/ethics_checklist.md) for the full et
 
 ## Team contribuitors
 
-Ianitchi Valeria | personalist-salvator agent
-Minciuna Catalina | anti-sistem agent
-Lostun Flaviu | pro-european
-Ignat Carmina | conspirationist
-Hutanu Diana | anti-suveranist agent
-Havrisciuc George | intelectual-critic agent
+Ianitchi Valeria -> personalist-salvator agent
+Minciuna Catalina -> anti-sistem agent
+Lostun Flaviu -> pro-european
+Ignat Carmina -> conspirationist
+Hutanu Diana -> anti-suveranist agent
+Havrisciuc George -> intelectual-critic agent
 
 ---
 
