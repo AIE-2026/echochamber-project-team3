@@ -1,5 +1,5 @@
 # UI
-gradio>=6.9.0
+gradio>=4.44.1
 
 # LLM routing (supports OpenAI, DeepSeek, Gemini, Claude, local Ollama)
 litellm>=1.35.0
